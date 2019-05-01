@@ -1,5 +1,6 @@
 import scrapy
 import json
+import datetime
 from scrapy.http.request import Request
 
 class PilpresSpider(scrapy.Spider):
@@ -7,7 +8,8 @@ class PilpresSpider(scrapy.Spider):
 	start_urls = [
 		'https://pemilu2019.kpu.go.id/static/json/wilayah/0.json',
 	]
-	branchLimit = 999999999999999999
+	branchLimit = 999999 # when testing the code it is better to make its value to 1 in order to shorten the runtime
+	finalResult = []
 
 	def formatKodeWilayah(self, kodeWilayah):
 		concat = kodeWilayah[0]
@@ -20,13 +22,18 @@ class PilpresSpider(scrapy.Spider):
 
 	def makeTabulasiUrl(self, kodeWilayah):
 		return 'https://pemilu2019.kpu.go.id/static/json/hhcw/ppwp/' + self.formatKodeWilayah(kodeWilayah) + '.json'
+	
+	def tpsNameToTpsNumber(self, strk):
+		arr = [int(s) for s in strk.split() if s.isdigit()]
+		return arr[0]
 
 	def parse(self, response):
 		jsonresponse = json.loads(response.body_as_unicode())
 		count = 0
+		print('start')
 		for id, propinsi in jsonresponse.items():
 			count += 1
-			if (count <= self.branchLimit):
+			if (count <= self.branchLimit and count <= len(jsonresponse)):
 				result = {
 					'idPropinsi': id,
 					'propinsi': propinsi
@@ -141,8 +148,9 @@ class PilpresSpider(scrapy.Spider):
 				'kec': kec.get('nama'),
 				'idKel' : idKel,
 				'kel': kel.get('nama'),
-				'tps': tps.get('nama'),
+				'tps': self.tpsNameToTpsNumber(tps.get('nama')),
 				'01': tabulasi.get(id).get('21'),
 				'02': tabulasi.get(id).get('22'),
 			}
+			self.finalResult.append(result.copy())
 			yield result
