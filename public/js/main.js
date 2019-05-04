@@ -54,7 +54,7 @@ var gridOptions = {
 file_list = [];
 
 function getFileList() {
-	$.get("public/data/file_list.txt", data => {
+	$.get("data/file_list.txt", data => {
 		file_list = data.split("\n");
 		latestKomparasi = getKomparasiList(file_list);
 		fileParam = getUrlVars();
@@ -64,7 +64,7 @@ function getFileList() {
 }
 
 function loadKomparasiData(filename) {
-  agGrid.simpleHttpRequest({ url: "public/data/" + filename }).then(function(data) {
+  agGrid.simpleHttpRequest({ url: "data/" + filename }).then(function(data) {
 		gridOptions.api.setRowData(data);
 		$('#data-time').html(filename.replace('komparasi_','').replace('.json','').replace('_', ' ').replace('.',':'))
   });
