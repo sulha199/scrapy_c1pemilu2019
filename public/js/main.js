@@ -77,12 +77,6 @@ function loadKomparasiData(filename) {
         .replace(".", ":")
     );
   });
-  // setup the grid after the page has finished loading
-  document.addEventListener("DOMContentLoaded", function() {
-    agGrid.simpleHttpRequest({ url: "" }).then(function(data) {
-      gridOptions.api.setRowData(data);
-    });
-  });
 }
 
 function getKomparasiList(list) {
