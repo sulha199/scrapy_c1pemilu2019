@@ -54,7 +54,7 @@ var gridOptions = {
 file_list = [];
 
 function getFileList() {
-	$.get("data/file_list.txt", data => {
+	$.get("https://raw.githubusercontent.com/sulha199/scrapy_c1pemilu2019/master/public/data/file_list.txt", data => {
 		file_list = data.split("\n");
 		latestKomparasi = getKomparasiList(file_list);
 		fileParam = getUrlVars();
