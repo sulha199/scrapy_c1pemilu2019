@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="js/helpers.js"></script>
+
+    <script>
+      var __basePath = "";
+    </script>
+    <script src="js/settings.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/19.1.4/ag-grid-community.min.js"></script>
+  </head>
+  <body>
+    <div>Data diupdate pada <span id="data-time"></span>. <a href="javascript:openVersions()">Klik untuk melihat data lama</a>.</div>
+    <div id="myGrid" style="height: 100%;" class="ag-theme-balham"></div>
+    <div id="old-version-selector" title="Pilih Data Komparasi Sebelumnya">
+			Berikut data yang tersedia:
+			<ul id="komparasi-list"></ul>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
