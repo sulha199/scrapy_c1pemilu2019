@@ -1,0 +1,11 @@
+file_list.txt
+kawal_2019-05-04_14.45.csv
+kawal_2019-05-04_14.45.xlsx
+kawal_2019-05-04_14.52.csv
+kawal_2019-05-04_14.52.xlsx
+komparasi_2019-05-04_14.45.json
+komparasi_2019-05-04_14.52.json
+kpu_2019-05-04_14.45.csv
+kpu_2019-05-04_14.45.xlsx
+kpu_2019-05-04_14.52.csv
+kpu_2019-05-04_14.52.xlsx
