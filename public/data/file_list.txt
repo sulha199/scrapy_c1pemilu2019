@@ -9,11 +9,14 @@ kawal_2019-05-04_18.10.csv
 kawal_2019-05-04_18.10.xlsx
 kawal_2019-05-05_00.24.csv
 kawal_2019-05-05_00.24.xlsx
+kawal_2019-05-06_23.10.csv
+kawal_2019-05-06_23.10.xlsx
 komparasi_2019-05-04_14.45.json
 komparasi_2019-05-04_14.52.json
 komparasi_2019-05-04_14.57.json
 komparasi_2019-05-04_19.05.json
 komparasi_2019-05-05_01.18.json
+komparasi_2019-05-07_00.08.json
 kpu_2019-05-04_14.45.csv
 kpu_2019-05-04_14.45.xlsx
 kpu_2019-05-04_14.52.csv
@@ -24,3 +27,5 @@ kpu_2019-05-04_19.05.csv
 kpu_2019-05-04_19.05.xlsx
 kpu_2019-05-05_01.18.csv
 kpu_2019-05-05_01.18.xlsx
+kpu_2019-05-07_00.08.csv
+kpu_2019-05-07_00.08.xlsx
