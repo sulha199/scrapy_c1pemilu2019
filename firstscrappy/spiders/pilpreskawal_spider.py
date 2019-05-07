@@ -9,7 +9,7 @@ class PilpresSpider(scrapy.Spider):
 	start_urls = [
 		'https://pantau.kawalpilpres2019.id/api/tps.json?nocache=' + str(randint(100000,999999999))
 	]
-	branchLimit = 999999 # when testing the code it is better to make its value to 1 in order to shorten the runtime
+	branchLimit = 99999 # when testing the code it is better to make its value to 1 in order to shorten the runtime
 	finalResult = []
 
 	def makeUrl(self, kodeWilayah):
@@ -127,8 +127,8 @@ class PilpresSpider(scrapy.Spider):
 					'idKel' : idKel,
 					'kel': kel.get('nama_wilayah'),
 					'tps': tps.get('nama_wilayah'),
-					'01': tps.get('jokowi_amin'),
-					'02': tps.get('prabowo_sandi')
+					'p1': tps.get('jokowi_amin'),
+					'p2': tps.get('prabowo_sandi')
 				}
 				yield result
 			else:

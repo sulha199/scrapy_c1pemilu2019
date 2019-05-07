@@ -149,8 +149,8 @@ class PilpresSpider(scrapy.Spider):
 				'idKel' : idKel,
 				'kel': kel.get('nama'),
 				'tps': self.tpsNameToTpsNumber(tps.get('nama')),
-				'01': tabulasi.get(id).get('21'),
-				'02': tabulasi.get(id).get('22'),
+				'p1': tabulasi.get(id).get('21'),
+				'p2': tabulasi.get(id).get('22'),
 			}
 			self.finalResult.append(result.copy())
 			yield result
