@@ -22,7 +22,12 @@
         font-family: Arial;
         font-size: .9em;
       }
-
+      header {
+        background: #2d3436;
+        padding: 1px;
+        margin-bottom: 1em;
+        color: #ffffff;
+      }
       #old-version-selector {
         display: none;
       }
@@ -34,6 +39,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/19.1.4/ag-grid-community.min.js"></script>
   </head>
   <body>
+    <header>
+      <h3>Deteksi Perbedaan Data Pada Situs Real Count</h3>
+    </header>
     <div>Data ini di ambil pada <span id="data-time"></span>. <a href="javascript:openVersions()">Klik untuk melihat data pada di waktu lain</a>.</div><br/>
     <div class="widget">
       <fieldset>
@@ -43,7 +51,7 @@
         </div>
       </fieldset>
     </div>
-    <div id="myGrid" style="height: 100%;" class="ag-theme-balham"></div>
+    <div id="myGrid" style="height: 100%;"  class="ag-theme-balham"></div>
     <div id="old-version-selector" title="Pilih Data Komparasi Sebelumnya">
 			Berikut data yang tersedia:
 			<ul id="komparasi-list"></ul>
