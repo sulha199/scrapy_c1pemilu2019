@@ -112,6 +112,10 @@ function openVersions() {
   $("#old-version-selector").dialog();
 }
 
+function onFilterTextBoxChanged() {
+  gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   var gridDiv = document.querySelector("#myGrid");
   new agGrid.Grid(gridDiv, gridOptions);

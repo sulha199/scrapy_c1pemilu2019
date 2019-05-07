@@ -19,12 +19,30 @@
         margin: 0;
         padding: 0;
         height: 100%;
+        font-family: Arial;
+        font-size: .9em;
+      }
+
+      #old-version-selector {
+        display: none;
+      }
+
+      #filter-text-box {
+        width: 100%;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/19.1.4/ag-grid-community.min.js"></script>
   </head>
   <body>
-    <div>Data diupdate pada <span id="data-time"></span>. <a href="javascript:openVersions()">Klik untuk melihat data lama</a>.</div>
+    <div>Data ini di ambil pada <span id="data-time"></span>. <a href="javascript:openVersions()">Klik untuk melihat data pada di waktu lain</a>.</div><br/>
+    <div class="widget">
+      <fieldset>
+        <legend>Pencarian</legend>
+        <div class="controlgroup">
+          <input type="text" name="filter" id="filter-text-box" placeholder="Masukkan nama Kelurahan, Kecamatan, Kabupaten, atau Propinsi untuk melakukan pencarian" oninput="onFilterTextBoxChanged()" />
+        </div>
+      </fieldset>
+    </div>
     <div id="myGrid" style="height: 100%;" class="ag-theme-balham"></div>
     <div id="old-version-selector" title="Pilih Data Komparasi Sebelumnya">
 			Berikut data yang tersedia:
