@@ -6,7 +6,7 @@ var columnDefs = [
   },
   {
     headerName: "Kab/Kota",
-    field: "kota",
+    field: "kab",
     width: 150
   },
   {
