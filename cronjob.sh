@@ -13,6 +13,7 @@ psql -h 127.0.0.1 -w -U postgres -d pemilu -c "\copy pilpres_kpu FROM '${PWD}/${
 psql -h 127.0.0.1 -w -U postgres -d pemilu -c "REFRESH MATERIALIZED VIEW m_kawal;"
 psql -h 127.0.0.1 -w -U postgres -d pemilu -c "REFRESH MATERIALIZED VIEW m_kpu;"
 psql -h 127.0.0.1 -w -U postgres -d pemilu -c "REFRESH MATERIALIZED VIEW m_kpu_vs_kawal;"
+psql -h 127.0.0.1 -w -U postgres -d pemilu -c "REFRESH MATERIALIZED VIEW m_kpu_n_dpt;"
 psql -h 127.0.0.1 -w -U postgres -d pemilu -c "\copy (SELECT json_agg(m_kpu_vs_kawal) FROM m_kpu_vs_kawal) To '${PWD}/${datafolder}/komparasi_${datekpu}.json'"
 sed -i 's/\\n//g' "${PWD}/${datafolder}/komparasi_${datekpu}.json"
 ls "${datafolder}" > "${datafolder}/file_list.txt"
