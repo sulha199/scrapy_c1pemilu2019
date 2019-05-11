@@ -53,21 +53,21 @@ var columnDefs = [
         field: "suara_valid",
         width: 70,
         sortable: true,
-        cellStyle: { "background-color": "#ececec" },
+        cellStyle: { "background-color": "#ececec" }
       },
       {
         headerName: "DPT awal",
         field: "dpt",
         width: 70,
         sortable: true,
-        cellStyle: { "background-color": "#ececec" },
+        cellStyle: { "background-color": "#ececec" }
       },
       {
         headerName: "Presentase Suara Valid / DPT (%)",
         field: "presentase",
         width: 110,
         sortable: true,
-        cellStyle: { "background-color": "#ececec" },
+        cellStyle: { "background-color": "#ececec" }
       }
     ]
   },
@@ -98,7 +98,7 @@ var columnDefs = [
         field: "ayo_p1",
         width: 70,
         sortable: true,
-        cellStyle: { "background-color": "#bde2e5" }        
+        cellStyle: { "background-color": "#bde2e5" }
       },
       {
         headerName: "02",
@@ -124,7 +124,7 @@ var gridOptions = {
   headerHeight: headerHeight
 };
 
-var notGridOptions = {
+var topGridOptions = {
   defaultColDef: {
     sortable: true,
     resizable: true,
