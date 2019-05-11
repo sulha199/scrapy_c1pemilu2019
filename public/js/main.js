@@ -1,56 +1,3 @@
-var columnDefs = [
-  {
-    headerName: "Propinsi",
-    field: "propinsi",
-    width: 150
-  },
-  {
-    headerName: "Kab/Kota",
-    field: "kab",
-    width: 150
-  },
-  {
-    headerName: "Kecamatan",
-    field: "kec",
-    width: 150
-  },
-  {
-    headerName: "Kelurahan",
-    field: "kel",
-    width: 150
-  },
-  {
-    headerName: "TPS",
-    field: "tps",
-    width: 70
-  },
-  {
-    headerName: "pemilu2019.kpu.go.id/",
-    children: [
-      { headerName: "01", field: "p1", width: 70 },
-      { headerName: "02", field: "p2", width: 70 }
-    ]
-  },
-  {
-    headerName: "pantau.kawalpilpres2019.id",
-    children: [
-      { headerName: "01", field: "kawal_p1", width: 70 },
-      { headerName: "02", field: "kawal_p2", width: 70 }
-    ]
-  }
-];
-
-var gridOptions = {
-  defaultColDef: {
-    sortable: true,
-    resizable: true,
-    filter: true
-  },
-  debug: true,
-  columnDefs: columnDefs,
-  rowData: []
-};
-
 file_list = [];
 
 function getFileList() {
@@ -67,8 +14,12 @@ function getFileList() {
 }
 
 function loadKomparasiData(filename) {
+  selectedData = filename.replace("komparasi_", "");
   agGrid.simpleHttpRequest({ url: "data/" + filename }).then(function(data) {
     gridOptions.api.setRowData(data);
+    loadTopGrid("toplist_" + selectedData);
+    loadLowGrid("lowlist_" + selectedData);
+    loadNotGrid("notlist_" + selectedData);
     $("#data-time").html(
       filename
         .replace("komparasi_", "")

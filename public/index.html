@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Komparasi Data C1 antar situs Real Count</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="js/helpers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/helpers.js"></script>
 
-    <script>
-      var __basePath = "";
-    </script>
+    <script src="js/vars.js"></script>
     <script src="js/settings.js"></script>
     <style>
       html,
@@ -20,7 +19,8 @@
         padding: 0;
         height: 100%;
         font-family: Arial;
-        font-size: .9em;
+        font-size: 0.9em;
+        overflow-y: hidden;
       }
       header {
         background: #2d3436;
@@ -32,8 +32,22 @@
         display: none;
       }
 
-      #filter-text-box {
+      .filter-text-box {
         width: 100%;
+      }
+
+      .ui-tabs .ui-tabs-panel {
+        height: calc(100vh - 80px);
+      }
+
+      .ag-theme-balham .ag-header-cell-label .ag-header-cell-text {
+        overflow: visible !important;
+        text-overflow: unset !important;
+        white-space: normal !important;
+      }
+
+      .ag-theme-balham .ag-header-cell::after, .ag-theme-balham .ag-header-group-cell::after {
+        height: 70px !important;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/19.1.4/ag-grid-community.min.js"></script>
@@ -42,20 +56,204 @@
     <header>
       <h3>Deteksi Perbedaan Data Pada Situs Real Count</h3>
     </header>
-    <div>Data ini di ambil pada <span id="data-time"></span>. <a href="javascript:openVersions()">Klik untuk melihat data pada di waktu lain</a>.</div><br/>
-    <div class="widget">
-      <fieldset>
-        <legend>Pencarian</legend>
-        <div class="controlgroup">
-          <input type="text" name="filter" id="filter-text-box" placeholder="Masukkan nama Kelurahan, Kecamatan, Kabupaten, atau Propinsi untuk melakukan pencarian" oninput="onFilterTextBoxChanged()" />
+    <div>
+      Data ini di ambil pada <span id="data-time"></span>.
+      <a href="javascript:openVersions()"
+        >Klik untuk melihat data pada di waktu lain</a
+      >
+      .
+    </div>
+    <br />
+
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Rekap Perbedaan Data</a></li>
+        <li><a href="#tabs-2">1500 Realisasi Suara Tertiggi</a></li>
+        <li><a href="#tabs-3">1500 Realisasi Suara Terendah</a></li>
+        <li>
+          <a href="#tabs-6">TPS Selain Luar Negeri yang Tidak Ada Pada DPT Awal</a>
+        </li>
+        <li><a href="#tabs-4">Pengaduan</a></li>
+        <li><a href="#tabs-5">Sumber Data</a></li>
+      </ul>
+      <div id="tabs-1">
+        <div class="widget">
+          <fieldset>
+            <legend>Pencarian</legend>
+            <div class="controlgroup">
+              <input
+                type="text"
+                name="filter"
+                id="filter-text-box"
+                class="filter-text-box"
+                placeholder="Masukkan nama Kelurahan, Kecamatan, Kabupaten, atau Propinsi untuk melakukan pencarian"
+                oninput="onFilterTextBoxChanged()"
+              />
+            </div>
+          </fieldset>
         </div>
-      </fieldset>
+        <div
+          id="myGrid"
+          style="height: calc(100% - 146px);"
+          class="ag-theme-balham"
+        ></div>
+      </div>
+      <div id="tabs-2">
+        <div class="widget">
+          <fieldset>
+            <legend>Pencarian</legend>
+            <div class="controlgroup">
+              <input
+                type="text"
+                name="filter"
+                id="filter-top-text-box"
+                class="filter-text-box"
+                placeholder="Masukkan nama Kelurahan, Kecamatan, Kabupaten, atau Propinsi untuk melakukan pencarian"
+                oninput="onFilterTopTextBoxChanged()"
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div
+          id="topGrid"
+          style="height: calc(100% - 146px);"
+          class="ag-theme-balham"
+        ></div>
+      </div>
+      <div id="tabs-3">
+        <div class="widget">
+          <fieldset>
+            <legend>Pencarian</legend>
+            <div class="controlgroup">
+              <input
+                type="text"
+                name="filter"
+                id="filter-low-text-box"
+                class="filter-text-box"
+                placeholder="Masukkan nama Kelurahan, Kecamatan, Kabupaten, atau Propinsi untuk melakukan pencarian"
+                oninput="onFilterLowTextBoxChanged()"
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div
+          id="lowGrid"
+          style="height: calc(100% - 146px);"
+          class="ag-theme-balham"
+        ></div>
+      </div>
+      <div id="tabs-6">
+        <div class="widget">
+          <fieldset>
+            <legend>Pencarian</legend>
+            <div class="controlgroup">
+              <input
+                type="text"
+                name="filter"
+                id="filter-not-text-box"
+                class="filter-text-box"
+                placeholder="Masukkan nama Kelurahan, Kecamatan, Kabupaten, atau Propinsi untuk melakukan pencarian"
+                oninput="onFilterNotTextBoxChanged()"
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div
+          id="notGrid"
+          style="height: calc(100% - 146px);"
+          class="ag-theme-balham"
+        ></div>
+      </div>
+      <div id="tabs-4">
+        <p>Jika ada data yang tidak valid bisa melakukan pengaduan melalui:</p>
+        Situng KPU: <br />
+        <ul>
+          <li>Call Center: 021 319 025 67 / 021 319 025 77</li>
+          <li>Whatsapp: 0812 1177 2443</li>
+          <li>Email: bagianteknis@kpu.go.id</li>
+          <li>Mulai pukul 08.00 - 18.00</li>
+        </ul>
+        kawalpilpres2019.id: <br />
+        <ul>
+          <li>Benyamin Lumy: benylumy@gmail.com</li>
+          <li>R. Satriyanto: rsatriyanto@gmail.com</li>
+          <li>
+            Respon Cepat melalui
+            <a
+              href="https://pesan.kita.id/"
+              title="Aplikasi PeSankita Indonesia"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Aplikasi PeSankita Indonesia</a
+            >
+          </li>
+          <li>Indonesia: +6217042019</li>
+        </ul>
+        ayojagatps.com: <br />
+        <ul>
+          <li>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdSpgMgybRoYAoBkrFmlQRRaOu2jk_zBl6DaQOrnXElvMhZlQ/viewform"
+              >Form Saran dan Pengaduan.</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="tabs-5">
+        Karena terbatasnya sumber daya maka situs ini hanya mengambil data
+        rekapitulasi suara yang berasal dari:<br />
+        <ul>
+          <li>
+            <a href="https://pemilu2019.kpu.go.id/#/ppwp/hitung-suara/"
+              >Situng KPU</a
+            >, data yang ada di web ini kurang lebih akan diupdate satu hari
+            sekali.
+          </li>
+          <li>
+            Situs
+            <a href="https://pantau.kawalpilpres2019.id/"
+              >pantau.kawalpilpres2019.id</a
+            >, data yang ada di web ini kurang lebih akan diupdate satu hari
+            sekali.
+          </li>
+          <li>
+            Situs <a href="https://ayojagatps.com">ayojagatps.com</a>, data yang
+            ada di web ini berasal dari
+            <a
+              href="https://drive.google.com/open?id=1bp4oMjGSyU9JpxaA_uG7NJIWj5-2Nlek"
+              >file excel</a
+            >
+            yang di download dari web tersebut tanggal 23 April 2019.
+          </li>
+        </ul>
+        Sedangkan untuk rekapitulasi data DPT berasal dari:<br />
+        <ul>
+          <li>
+            <a href="https://lindungihakpilihmu.kpu.go.id/index.php/rekap/"
+              >lindungihakpilihmu.kpu.go.id/index.php/rekap</a
+            >
+          </li>
+          <li>
+            Situs ini kurang lebih menampilkan data DPT awal, bisa jadi saat ini
+            data DPT sudah berubah untuk mengakomodir TPS-TPS khusus seperti di
+            luar negeri, lapas, RS, dll.
+          </li>
+        </ul>
+      </div>
     </div>
-    <div id="myGrid" style="height: calc(100% - 146px);"  class="ag-theme-balham"></div>
+
     <div id="old-version-selector" title="Pilih Data Komparasi Sebelumnya">
-			Berikut data yang tersedia:
-			<ul id="komparasi-list"></ul>
+      Berikut data yang tersedia:
+      <ul id="komparasi-list"></ul>
     </div>
+    <script>
+      $(function() {
+        $("#tabs").tabs();
+      });
+    </script>
     <script src="js/main.js"></script>
+    <script src="js/topgrid.js"></script>
+    <script src="js/lowgrid.js"></script>
+    <script src="js/notgrid.js"></script>
   </body>
 </html>
