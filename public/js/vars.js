@@ -116,7 +116,8 @@ var gridOptions = {
     sortable: true,
     resizable: true,
     filter: true
-  },
+	},
+	enableSorting: true, 
   debug: true,
   columnDefs: columnDefs,
   rowData: [],
@@ -130,6 +131,7 @@ var topGridOptions = {
     resizable: true,
     filter: true
   },
+	enableSorting: true,
   debug: true,
   columnDefs: columnDefs,
   rowData: [],
@@ -143,6 +145,7 @@ var lowGridOptions = {
     resizable: true,
     filter: true
   },
+	enableSorting: true,
   debug: true,
   columnDefs: columnDefs,
   rowData: [],
@@ -156,6 +159,7 @@ var notGridOptions = {
     resizable: true,
     filter: true
   },
+	enableSorting: true,
   debug: true,
   columnDefs: columnDefs,
   rowData: [],
