@@ -35,14 +35,14 @@ var columnDefs = [
     headerName: "pemilu2019.kpu.go.id/",
     children: [
       {
-        headerName: "01",
+        headerName: "01 Jokowi Ma'ruf",
         field: "p1",
         width: 70,
         sortable: true,
         cellStyle: { "background-color": "#bde2e5" }
       },
       {
-        headerName: "02",
+        headerName: "02 Prabowo Sandi",
         field: "p2",
         width: 70,
         sortable: true,
@@ -75,14 +75,14 @@ var columnDefs = [
     headerName: "pantau.kawalpilpres2019.id",
     children: [
       {
-        headerName: "01",
+        headerName: "01 Jokowi Ma'ruf",
         field: "kawal_p1",
         width: 70,
         sortable: true,
         cellStyle: { "background-color": "#bde2e5" }
       },
       {
-        headerName: "02",
+        headerName: "02 Prabowo Sandi",
         field: "kawal_p2",
         width: 70,
         sortable: true,
@@ -94,14 +94,14 @@ var columnDefs = [
     headerName: "ayojagatps.com",
     children: [
       {
-        headerName: "01",
+        headerName: "01 Jokowi Ma'ruf",
         field: "ayo_p1",
         width: 70,
         sortable: true,
         cellStyle: { "background-color": "#bde2e5" }
       },
       {
-        headerName: "02",
+        headerName: "02 Prabowo Sandi",
         field: "ayo_p2",
         width: 70,
         sortable: true,

@@ -20,7 +20,6 @@
         height: 100%;
         font-family: Arial;
         font-size: 0.9em;
-        overflow-y: hidden;
       }
       header {
         background: #2d3436;
@@ -49,6 +48,33 @@
       .ag-theme-balham .ag-header-cell::after, .ag-theme-balham .ag-header-group-cell::after {
         height: 70px !important;
       }
+
+      .ag-theme-balham .ag-header-cell, .ag-theme-balham .ag-header-group-cell {
+        line-height: 32px;
+        padding-left: 4px !important;
+        padding-right: 2px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ag-theme-balham .ag-header-cell-label {
+        display: flex;
+        float: left;
+        height: 100%;
+        width: calc(100%) !important;
+      }
+
+      .ag-theme-balham .ag-header-cell-label .ag-header-cell-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.3em !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/19.1.4/ag-grid-community.min.js"></script>
   </head>
@@ -57,7 +83,7 @@
       <h3>Deteksi Perbedaan Data Pada Situs Real Count Pilpres 2019 untuk Mendeteksi Kesalahan Input Data</h3>
     </header>
     <div>
-      Data ini di ambil pada <span id="data-time"></span>.
+      Data ini di ambil pada <span id="data-time"></span>, bisa jadi saat ini telah ada data yang berubah.
       <a href="javascript:openVersions()"
         >Klik untuk melihat data pada di waktu lain</a
       >
@@ -245,8 +271,10 @@
         </ul>
       </div>
     </div>
-    <a href='https://free-hit-counters.net/'>freehitcounters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8ea2ae55d2077cfb46c7cf9251492384147b8608'></script>
-    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/526250/t/1"></script>
+    <div style="height: 1px!important;width: 100%;text-align: center;display: block;overflow: hidden;;">
+      <a href='https://free-hit-counters.net/'>freehitcounters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8ea2ae55d2077cfb46c7cf9251492384147b8608'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/526250/t/1"></script>
+    </div>
 
     <div id="old-version-selector" title="Pilih Data Komparasi Sebelumnya">
       Berikut data yang tersedia:
