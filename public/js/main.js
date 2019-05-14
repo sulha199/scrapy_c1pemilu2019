@@ -17,6 +17,7 @@ function loadKomparasiData(filename) {
   selectedData = filename.replace("komparasi_", "");
   agGrid.simpleHttpRequest({ url: "data/" + filename }).then(function(data) {
     gridOptions.api.setRowData(data);
+    document.getElementById('jumlah-data').innerHTML = data.length;
     loadTopGrid("toplist_" + selectedData);
     loadLowGrid("lowlist_" + selectedData);
     loadNotGrid("notlist_" + selectedData);
@@ -65,6 +66,7 @@ function openVersions() {
 
 function onFilterTextBoxChanged() {
   gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
+  document.getElementById('jumlah-data').innerHTML = gridOptions.api.getDisplayedRowCount();
 }
 
 document.addEventListener("DOMContentLoaded", function() {

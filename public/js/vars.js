@@ -49,7 +49,7 @@ var columnDefs = [
         cellStyle: { "background-color": "#cec" }
       },
       {
-        headerName: "Suara Valid",
+        headerName: "Suara 01 + 02",
         field: "suara_valid",
         width: 70,
         sortable: true,
@@ -63,7 +63,7 @@ var columnDefs = [
         cellStyle: { "background-color": "#ececec" }
       },
       {
-        headerName: "Presentase Suara Valid / DPT (%)",
+        headerName: "Suara 01 + 02 / DPT (%)",
         field: "presentase",
         width: 110,
         sortable: true,

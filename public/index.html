@@ -93,12 +93,13 @@
 
     <div id="tabs">
       <ul>
-        <li><a href="#tabs-1">TPS Yang Datanya Berbeda</a></li>
-        <li><a href="#tabs-2">TPS Dengan Tingkat Partisipasi Tertinggi</a></li>
-        <li><a href="#tabs-3">TPS Dengan Tingkat Partisipasi Terendah</a></li>
+        <li><a href="#tabs-1">TPS Data Berbeda</a></li>
+        <li><a href="#tabs-2">1500 TPS Partisipasi Tertinggi</a></li>
+        <li><a href="#tabs-3">1500 TPS Partisipasi Terendah</a></li>
         <li>
-          <a href="#tabs-6">TPS Dalam Negeri Yang Tidak Ada Pada DPT Awal KPU</a>
+          <a href="#tabs-6">TPS Dalam Negeri Tidak Dalam DPT Awal KPU</a>
         </li>
+        <li><a href="#tabs-7">TPS Rekap Suara Sah Tidak Valid</a></li>
         <li><a href="#tabs-5">Sumber Data</a></li>
         <li><a href="#tabs-4">Pengaduan</a></li>
       </ul>
@@ -116,8 +117,11 @@
                 oninput="onFilterTextBoxChanged()"
               />
             </div>
-            <div class="controlgroup"><p>Klik kolom pada tabel untuk melakukan sorting.</p></div>
-            <div class="controlgroup"><p>Karena proses rekap KPU dan situs tsb masih dalam proses, bisa jadi TPS anda belum tampil disini.</p></div>
+            <ul>
+              <li>Menampilkan <span id="jumlah-data">0</span> Data</li>
+              <li>Klik kolom pada tabel untuk melakukan sorting.</li>
+              <li>Karena proses rekap KPU dan situs tsb masih dalam proses, bisa jadi TPS anda belum tampil disini.</li>
+            </ul>
           </fieldset>
         </div>
         <div
@@ -140,6 +144,11 @@
                 oninput="onFilterTopTextBoxChanged()"
               />
             </div>
+            <ul>
+              <li>Menampilkan <span id="jumlah-top-data">0</span> Data</li>
+              <li>Klik kolom pada tabel untuk melakukan sorting.</li>
+              <li>Karena proses rekap KPU dan situs tsb masih dalam proses, bisa jadi TPS anda belum tampil disini.</li>
+            </ul>
           </fieldset>
         </div>
         <div
@@ -162,6 +171,11 @@
                 oninput="onFilterLowTextBoxChanged()"
               />
             </div>
+            <ul>
+              <li>Menampilkan <span id="jumlah-low-data">0</span> Data</li>
+              <li>Klik kolom pada tabel untuk melakukan sorting.</li>
+              <li>Karena proses rekap KPU dan situs tsb masih dalam proses, bisa jadi TPS anda belum tampil disini.</li>
+            </ul>
           </fieldset>
         </div>
         <div
@@ -184,6 +198,11 @@
                 oninput="onFilterNotTextBoxChanged()"
               />
             </div>
+            <ul>
+              <li>Menampilkan <span id="jumlah-not-data">0</span> Data</li>
+              <li>Klik kolom pada tabel untuk melakukan sorting.</li>
+              <li>Karena proses rekap KPU dan situs tsb masih dalam proses, bisa jadi TPS anda belum tampil disini.</li>
+            </ul>
           </fieldset>
         </div>
         <div
@@ -271,12 +290,14 @@
           <li>Data DPT juga diambil dengan metode scrapping dan bukan merupakan perbuatan pembobolan data dsb.</li>
         </ul>
       </div>
+      <div id="tabs-7">
+        <ul>
+          <li>Tidak valid yang dimaksud adalah jumlah suara 01 + 02 tidak sesuai dengan Total Suara Sah</li>
+          <li>Klik <a href="http://bit.ly/kacausitung" target="_blank">bit.ly/kacausitung</a> untuk melihat daftarnya</li>
+        </ul>
+      </div>
     </div>
-    <div style="height: 1px!important;width: 100%;text-align: center;display: block;overflow: hidden;;">
-      <a href='https://free-hit-counters.net/'>freehitcounters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8ea2ae55d2077cfb46c7cf9251492384147b8608'></script>
-      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/526250/t/1"></script>
-    </div>
-
+    
     <div id="old-version-selector" title="Pilih Data Komparasi Sebelumnya">
       Berikut data yang tersedia:
       <ul id="komparasi-list"></ul>
@@ -290,5 +311,10 @@
     <script src="js/topgrid.js"></script>
     <script src="js/lowgrid.js"></script>
     <script src="js/notgrid.js"></script>
+
+    <div style="height: 1px!important;width: 100%;text-align: center;display: block;overflow: hidden;;">
+      <a href='https://free-hit-counters.net/'>freehitcounters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8ea2ae55d2077cfb46c7cf9251492384147b8608'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/526250/t/1"></script>
+    </div>
   </body>
 </html>
