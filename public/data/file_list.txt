@@ -42,6 +42,7 @@ komparasi_2019-05-17_05.22.json
 komparasi_2019-05-17_12.37.json
 komparasi_2019-05-17_22.08.json
 komparasi_2019-05-18_09.14.json
+komparasi_2019-05-20_00.22.json
 kpu_2019-05-07_00.08.xlsx
 kpu_2019-05-08_01.32.xlsx
 kpu_2019-05-09_02.04.xlsx
@@ -63,6 +64,7 @@ kpu_2019-05-17_12.37.xlsx
 kpu_2019-05-17_22.08.xlsx
 kpu_2019-05-18_08.12.xlsx
 kpu_2019-05-18_09.14.xlsx
+kpu_2019-05-20_00.22.xlsx
 lowlist_2019-05-10_02.09.json
 lowlist_2019-05-10_02.10.json
 lowlist_2019-05-11_13.38.json
@@ -80,6 +82,7 @@ lowlist_2019-05-17_05.22.json
 lowlist_2019-05-17_12.37.json
 lowlist_2019-05-17_22.08.json
 lowlist_2019-05-18_09.14.json
+lowlist_2019-05-20_00.22.json
 match_2019-05-13_12.47.json
 match_2019-05-14_04.29.json
 match_2019-05-14_12.30.json
@@ -92,6 +95,7 @@ match_2019-05-17_05.22.json
 match_2019-05-17_12.37.json
 match_2019-05-17_22.08.json
 match_2019-05-18_09.14.json
+match_2019-05-20_00.22.json
 notlist_2019-05-10_02.09.json
 notlist_2019-05-10_02.10.json
 notlist_2019-05-11_13.38.json
@@ -109,6 +113,7 @@ notlist_2019-05-17_05.22.json
 notlist_2019-05-17_12.37.json
 notlist_2019-05-17_22.08.json
 notlist_2019-05-18_09.14.json
+notlist_2019-05-20_00.22.json
 toplist_2019-05-10_02.09.json
 toplist_2019-05-10_02.10.json
 toplist_2019-05-11_13.38.json
@@ -126,3 +131,4 @@ toplist_2019-05-17_05.22.json
 toplist_2019-05-17_12.37.json
 toplist_2019-05-17_22.08.json
 toplist_2019-05-18_09.14.json
+toplist_2019-05-20_00.22.json
