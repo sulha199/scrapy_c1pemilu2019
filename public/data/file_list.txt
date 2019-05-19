@@ -21,6 +21,7 @@ kawal_2019-05-17_11.43.xlsx
 kawal_2019-05-17_21.04.xlsx
 kawal_2019-05-18_08.08.xlsx
 kawal_2019-05-18_08.12.xlsx
+kawal_2019-05-19_23.27.xlsx
 komparasi_2019-05-07_00.08.json
 komparasi_2019-05-08_01.32.json
 komparasi_2019-05-09_02.04.json
