@@ -23,6 +23,7 @@ kawal_2019-05-18_08.08.xlsx
 kawal_2019-05-18_08.12.xlsx
 kawal_2019-05-19_23.27.xlsx
 kawal_2019-05-20_07.19.xlsx
+kawal_2019-05-20_18.54.xlsx
 komparasi_2019-05-07_00.08.json
 komparasi_2019-05-08_01.32.json
 komparasi_2019-05-09_02.04.json
@@ -68,6 +69,7 @@ kpu_2019-05-18_08.12.xlsx
 kpu_2019-05-18_09.14.xlsx
 kpu_2019-05-20_00.22.xlsx
 kpu_2019-05-20_08.15.xlsx
+kpu_2019-05-20_19.49.xlsx
 lowlist_2019-05-10_02.09.json
 lowlist_2019-05-10_02.10.json
 lowlist_2019-05-11_13.38.json
