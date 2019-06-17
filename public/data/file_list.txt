@@ -34,6 +34,7 @@ kawal_2019-05-29_03.43.xlsx
 kawal_2019-05-30_01.18.xlsx
 kawal_2019-05-31_05.09.xlsx
 kawal_2019-06-01_06.34.xlsx
+kawal_2019-06-18_00.58.xlsx
 komparasi_2019-05-07_00.08.json
 komparasi_2019-05-08_01.32.json
 komparasi_2019-05-09_02.04.json
@@ -67,6 +68,7 @@ komparasi_2019-05-29_03.48.json
 komparasi_2019-05-30_02.13.json
 komparasi_2019-05-31_06.04.json
 komparasi_2019-06-01_07.27.json
+komparasi_2019-06-18_01.55.json
 kpu_2019-05-07_00.08.xlsx
 kpu_2019-05-08_01.32.xlsx
 kpu_2019-05-09_02.04.xlsx
@@ -101,6 +103,7 @@ kpu_2019-05-29_03.48.xlsx
 kpu_2019-05-30_02.13.xlsx
 kpu_2019-05-31_06.04.xlsx
 kpu_2019-06-01_07.27.xlsx
+kpu_2019-06-18_01.55.xlsx
 lowlist_2019-05-10_02.09.json
 lowlist_2019-05-10_02.10.json
 lowlist_2019-05-11_13.38.json
@@ -131,6 +134,7 @@ lowlist_2019-05-29_03.48.json
 lowlist_2019-05-30_02.13.json
 lowlist_2019-05-31_06.04.json
 lowlist_2019-06-01_07.27.json
+lowlist_2019-06-18_01.55.json
 match_2019-05-13_12.47.json
 match_2019-05-14_04.29.json
 match_2019-05-14_12.30.json
@@ -156,6 +160,7 @@ match_2019-05-29_03.48.json
 match_2019-05-30_02.13.json
 match_2019-05-31_06.04.json
 match_2019-06-01_07.27.json
+match_2019-06-18_01.55.json
 notlist_2019-05-10_02.09.json
 notlist_2019-05-10_02.10.json
 notlist_2019-05-11_13.38.json
@@ -186,6 +191,7 @@ notlist_2019-05-29_03.48.json
 notlist_2019-05-30_02.13.json
 notlist_2019-05-31_06.04.json
 notlist_2019-06-01_07.27.json
+notlist_2019-06-18_01.55.json
 toplist_2019-05-10_02.09.json
 toplist_2019-05-10_02.10.json
 toplist_2019-05-11_13.38.json
@@ -216,3 +222,4 @@ toplist_2019-05-29_03.48.json
 toplist_2019-05-30_02.13.json
 toplist_2019-05-31_06.04.json
 toplist_2019-06-01_07.27.json
+toplist_2019-06-18_01.55.json
